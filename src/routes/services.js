@@ -10,7 +10,7 @@ router.post('/services', (req, res) => {
         res.json(data)
     }).catch((error)=>{
         res.json({
-            message: err
+            message: error
         })
     });
 });
@@ -28,7 +28,7 @@ router.get('/services', (req, res)=> {
     });
 });
 
-router.put('/clients/:id', (req, res)=>{
+router.put('/services/:id', (req, res)=>{
     const { id } = req.params;
     const { clientId, numOfPants, numOfShirts, entryDate, exitDate, description } = req.body;
    
@@ -43,3 +43,5 @@ router.put('/clients/:id', (req, res)=>{
         })
     })
 })
+
+module.exports = router;

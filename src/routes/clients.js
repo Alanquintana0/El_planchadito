@@ -7,7 +7,7 @@ const router = express.Router()
 router.post('/clients', (req, res) => {
     const client = clientSchema(req.body);
     
-    user.save().then((data) => {
+    client.save().then((data) => {
         res.json(data)
     }).catch((error) => {
         res.json({

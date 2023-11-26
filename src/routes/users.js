@@ -13,6 +13,7 @@ router.post("/users", async (req, res) => {
   var newName = req.body.name;
   var newPhoneNumber = req.body.phoneNumber;
   var newAddress = req.body.address;
+  console.log(req.body)
 
   //Se comprueba que el usuario no exista en la base de datos almacenando el resultado en una constante
   const existingUser = await userSchema.findOne({ userName: newUserName });

@@ -3,19 +3,22 @@ const mongoose = require('mongoose')
 const serviceSchema = mongoose.Schema({
     clientId: {
         type: String,
-        required: true,
+        required: false,
+        default: 'Servicio con cliente no registrado'
     },
     numOfPants: {
         type: Number,
         required: false,
+        default: 'No pantalones'
     },
     numOfShirts: {
         type: Number,
         required: false,
+        default: 'No playeras'
     },
     entryDate:{
         type: Date,
-        required: true
+        default: Date.now
     },
     exitDate:{
         type: Date,

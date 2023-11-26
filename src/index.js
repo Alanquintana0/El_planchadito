@@ -10,8 +10,8 @@ const port = process.env.PORT || 3000
 
 app.use(express.json())
 app.use('/api', clientRoutes);
-app.use('api', serviceRoutes);
-app.use('api', userRoutes);
+app.use('/api', userRoutes);
+app.use('/api', serviceRoutes);
 
 app.get('/', (req, res)=>{
     res.send('El planchadito api');

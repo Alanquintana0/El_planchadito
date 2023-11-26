@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 
 const clientSchema = new mongoose.Schema({
+    id: { type: Number },
     name: {
         type: String,
         required: true,
@@ -19,5 +20,4 @@ const clientSchema = new mongoose.Schema({
         default: 'No address provided'
     }
 })
-
 module.exports = mongoose.model('Client', clientSchema);
